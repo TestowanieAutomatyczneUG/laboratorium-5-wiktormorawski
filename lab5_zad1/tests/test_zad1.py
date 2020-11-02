@@ -8,10 +8,10 @@ class HammingTest(unittest.TestCase):
     def test_single_letter_identical_strands(self):
         self.assertEqual(hamming.distance("A", "A"), 0)
 
-    '''def test_single_letter_different_strands(self):
+    def test_single_letter_different_strands(self):
         self.assertEqual(hamming.distance("G", "T"), 1)
 
-    def test_long_identical_strands(self):
+    '''def test_long_identical_strands(self):
         self.assertEqual(hamming.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
 
     def test_long_different_strands(self):
