@@ -5,3 +5,5 @@ def roman(arabic):
         return 'II'
     if arabic == 3:
         return 'III'
+    if arabic == 4:
+        return 'IV'
