@@ -11,3 +11,5 @@ def roman(arabic):
         return 'V'
     if arabic == 6:
         return 'VI'
+    if arabic == 9:
+        return 'IX'
