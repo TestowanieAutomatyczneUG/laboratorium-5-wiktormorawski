@@ -32,7 +32,7 @@ class HammingTest(unittest.TestCase):
     def test_disallow_right_empty_strand(self):
         with self.assertRaisesWithMessage(ValueError):
             hamming.distance("G", "")
-
+    '''
     # Utility functions
     def setUp(self):
         try:
@@ -42,7 +42,10 @@ class HammingTest(unittest.TestCase):
 
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
-'''
+
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
