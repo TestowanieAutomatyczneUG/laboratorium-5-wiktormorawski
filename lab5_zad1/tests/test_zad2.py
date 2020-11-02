@@ -7,10 +7,10 @@ class RomanNumeralsTest(unittest.TestCase):
 
     def test_2_is_two_i_s(self):
         self.assertEqual(roman(2), "II")
-'''
+
     def test_3_is_three_i_s(self):
         self.assertEqual(roman(3), "III")
-
+    '''
     def test_4_being_5_1_is_iv(self):
         self.assertEqual(roman(4), "IV")
 
