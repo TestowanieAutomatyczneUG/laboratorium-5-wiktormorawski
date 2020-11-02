@@ -1,6 +1,11 @@
 class hamming:
+    def __init__(self):
+        pass
     def distance(a, b):
-        if (a == b):
-            return 0
-        else:
-            return 1
+        result = 0
+        for i in range(len(a)):
+            if a[i] != b[i]:
+                result += 1
+            else:
+                pass
+        return result
