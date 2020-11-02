@@ -19,10 +19,10 @@ class RomanNumeralsTest(unittest.TestCase):
 
     def test_6_being_5_1_is_vi(self):
         self.assertEqual(roman(6), "VI")
-'''
+
     def test_9_being_10_1_is_ix(self):
         self.assertEqual(roman(9), "IX")
-
+'''
     def test_20_is_two_x_s(self):
         self.assertEqual(roman(27), "XXVII")
 
