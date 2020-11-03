@@ -14,8 +14,7 @@ class Song_lyrics:
                        'On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.']
 
     def byLine(self, line):
-        if line < len(self.lyrics):
+        if line < len(self.lyrics) and line > 0:
             return self.lyrics[line - 1]
         else:
             raise ValueError("line too big , index out of range")
-
