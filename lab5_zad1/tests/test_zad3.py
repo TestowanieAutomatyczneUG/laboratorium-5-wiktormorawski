@@ -26,6 +26,10 @@ class RomanNumeralsTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.byLine(0)
 
+    def test_dont_accept_anything_bout_integers(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.byLine("Wiktor")
+
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 
