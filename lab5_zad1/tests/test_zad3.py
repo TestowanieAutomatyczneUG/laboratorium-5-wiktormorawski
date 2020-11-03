@@ -52,6 +52,10 @@ class RomanNumeralsTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.byLineInterval(14, 8)
 
+    def test_byLines_dont_accept_nothing_bout_integers(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.byLineInterval('1', '3')
+
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 
