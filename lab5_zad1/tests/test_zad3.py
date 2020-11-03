@@ -38,6 +38,9 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_byLines_dont_accept_lower_value(self):
         with self.assertRaisesWithMessage(ValueError):
             self.temp.byLineInterval(0,3)
+    def test_byLines_dont_accept_higher_value(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.byLineInterval(12,14)
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 
