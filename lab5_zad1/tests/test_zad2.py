@@ -1,6 +1,7 @@
 from sample.zad2 import roman
 import unittest
 
+
 class RomanNumeralsTest(unittest.TestCase):
     def test_1_is_a_single_i(self):
         self.assertEqual(roman(1), "I")
@@ -58,6 +59,7 @@ class RomanNumeralsTest(unittest.TestCase):
 
     def test_3000_is_three_m_s(self):
         self.assertEqual(roman(3000), "MMM")
+
 
 if __name__ == '__main__':
     unittest.main()
