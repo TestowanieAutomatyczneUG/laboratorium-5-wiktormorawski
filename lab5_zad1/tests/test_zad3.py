@@ -31,7 +31,9 @@ class RomanNumeralsTest(unittest.TestCase):
             self.temp.byLine("Wiktor")
 
     def test_byLines_interval_from_1_to_3(self):
-        self.assertEqual(self.temp.byLineInterval(1, 3), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.' )
+        self.assertEqual(self.temp.byLineInterval(1, 3), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.' +
+                       'On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.' +
+                       'On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.' )
 
     def test_byLines_dont_accept_lower_value(self):
         with self.assertRaisesWithMessage(ValueError):

@@ -20,9 +20,11 @@ class Song_lyrics:
             raise ValueError("line type is not an int or line doesn't exist")
 
     def byLineInterval(self, start, end):
-        result = ''
-        for index in range((start - 1), end):
-            result = result + self.lyrics[index]
-        return result
+        if start > 0:
+            result = ''
+            for index in range((start - 1), end):
+                result = result + self.lyrics[index]
+            return result
+        else:
+            raise ValueError("Start lower than 0")
 
-print(Song_lyrics.byLineInterval(Song_lyrics(), 1, 3))
