@@ -30,3 +30,9 @@ class Song_lyrics:
                 raise ValueError("Start lower than 0 or end higher than paragrams or end lower than start ")
         else:
             raise ValueError('Not integers !')
+    def All(self):
+        result = ''
+        for i in range(len(self.lyrics)):
+            result = result + self.lyrics[i]
+        return result
+
