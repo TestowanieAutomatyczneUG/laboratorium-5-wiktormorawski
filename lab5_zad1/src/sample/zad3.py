@@ -15,17 +15,17 @@ class Song_lyrics:
 
     def byLine(self, line):
         if type(line) == int and len(self.lyrics) > line > 0:
-            return self.lyrics[line-1]
+            return self.lyrics[line - 1]
         else:
             raise ValueError("line type is not an int or line doesn't exist")
 
     def byLineInterval(self, start, end):
-        if start > 0  and end < len(self.lyrics):
+        if 0 < start < len(self.lyrics) and start < end < len(self.lyrics):
             result = ''
             for index in range((start - 1), end):
                 result = result + self.lyrics[index]
             return result
         else:
-            raise ValueError("Start lower than 0 or end higher than paragrams ")
+            raise ValueError("Start lower than 0 or end higher than paragrams or end lower than start ")
 
-print(Song_lyrics.byLineInterval(Song_lyrics(), 18, 8))
+
