@@ -18,3 +18,11 @@ class Song_lyrics:
             return self.lyrics[line-1]
         else:
             raise ValueError("line type is not an int or line doesn't exist")
+
+    def byLineInterval(self, start, end):
+        result = ''
+        for index in range((start - 1), end):
+            result = result + self.lyrics[index]
+        return result
+
+print(Song_lyrics.byLineInterval(Song_lyrics(), 1, 3))
