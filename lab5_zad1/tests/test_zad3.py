@@ -11,14 +11,20 @@ class RomanNumeralsTest(unittest.TestCase):
             self.assertRaisesRegex = self.assertRaisesRegexp
 
     def test_print_first_Byline_only(self):
-        self.assertEqual(self.temp.byLine(1), 'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
+        self.assertEqual(self.temp.byLine(1),
+                         'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.')
 
     def test_print_second_Byline_only(self):
-        self.assertEqual(self.temp.byLine(2), 'On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.')
+        self.assertEqual(self.temp.byLine(2),
+                         'On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.')
 
     def test_dont_accept_value_higher_than_number_of_lines(self):
         with self.assertRaisesWithMessage(ValueError):
-           self.temp.byLine(24)
+            self.temp.byLine(24)
+
+    def test_dont_accept_value_lower_than_1(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.temp.byLine(0)
 
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
